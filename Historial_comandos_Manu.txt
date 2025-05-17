@@ -1,0 +1,39 @@
+ls
+vagrant ssh
+ls
+cd
+mkdir repogit 
+ls
+cd repogit/
+git clone git@github.com:ManuHulej/Tp_Ayso.git
+ls
+cd Tp_Ayso/
+pwd
+ls -l
+cat /etc/os-release
+grep HOME_URL /etc/os-release 
+whoami
+echo “Usuario=$(whoami)” > datos_usuario.txt
+ls
+vagrant@VMDiscos:~/repogit/Tp_Ayso$
+git add .
+$?
+git config --global user.email "manuel.huleg@gmail.com"
+git config --global user.name 
+git config --global user.name "ManuHulej"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git status
+git push
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt
+cat datos_usuario.txt 
+nano datos_usuario.txt 
+cat <<EOF >> README.md
+Alumno : Manuel Hulej
+Division: 314 Turno: Noche
+EOF
+
+git add README.md datos_usuarios.txt 
+git add README.md datos_usuario.txt 
+git commit -m "ADD: Añadiendo Readme y datos de usuario"
+git push
+history -a
